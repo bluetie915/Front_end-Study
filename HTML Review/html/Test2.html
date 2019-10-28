@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery和js的对比</title>
+</head>
+<body>
+    <div id="box">div</div>
+    <script>
+        //原生js
+        window.onload = function (){
+            var div1 = document.getElementById("box");
+            div1.onclick = function(){
+                alert(this.innerHTML);
+            }
+        }
+        //jQuery
+        %(function (){
+            $("#box").click(function(){
+                alert($(this).html());
+                //this.html()和$(this).innerHTML是错误的
+            });
+        });
+    </script>
+</body>
+</html>

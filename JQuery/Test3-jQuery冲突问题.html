@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery冲突问题</title>
+    <script src="jquery.js" ></script>
+    <script>
+        //如果别的框架也有$，那么就会出现冲突
+          /*1.释放$的使用权
+          注意点：释放操作必须在编写其它jQuery代码之前编写
+                  释放之后就不能再使用$,改为jQuery*/
+
+        /*jQuery.noConflict();
+        jQuery(function () {
+            alert("Hello");
+        });*/
+
+
+//        2.自定义一个访问符号
+        var la=jQuery.noConflict();
+        la(function(){
+            alert("Hello");
+        });
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        // people = new Object();
+        // people.name = "zhangsan";
+        // people.age = "19";
+        // document.write(people.name);
+
+        // people = {name:"zhangsan",age:"20"};
+        // document.write(people.name);
+
+
+        // function people(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // son = new people("zhangsan",30);
+        // document.write(son.name);
+
+
+        var str = 'Hello World';
+        var str1 = 'Hello.zhangsan.lisi';
+        document.write(str.length+"<br>");//返回该字符串的长度
+        document.write(str.indexOf("World")+"<br>");//返回查找对象的位置或者-1
+        document.write(str.match("World")+"<br>");//返回找到的对象或者null
+        document.write(str.replace("World","zhangsan")+"<br>");//第一个参数是被替换的，第二个参数是要替换的
+        document.write(str.toUpperCase()+"<br>");//全部转化成大写字符，toLowerCase()可以全部转换成小写字符
+        var s = str1.split(".");
+        document.write(s[1]);
+    </script>
+</body>
+</html>

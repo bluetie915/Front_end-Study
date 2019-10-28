@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery选择器</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        .pink{
+           background-color:pink;
+        }
+        .green{
+           background-color:green;
+        }
+        .border{
+           border: 1px blue solid;
+           
+        }
+        
+        button{ 
+           margin-top:10px;
+           display:block;
+        }
+        
+        div{ 
+          margin:10px;
+        }
+        </style>
+        <script>
+            $(function(){
+                $("#b1").click(function(){
+                $("div[id]").toggleClass("border");
+                });
+                $("#b2").click(function(){
+                    $("div[id='pink']").toggleClass("border");
+                });
+                $("#b3").click(function(){
+                    $("div[id!='pink']").toggleClass("border");
+                });
+                $("#b4").click(function(){
+                    $("div[id^='p']").toggleClass("border");
+                });
+                $("#b5").click(function(){
+                    $("div[id$='k']").toggleClass("border");
+                });
+                $("#b6").click(function(){
+                    $("div[id*='ee']").toggleClass("border");
+                });
+            });
+        </script>
+</head>
+<body>
+        <button id="b1">给有id属性的div切换边框</button>
+        <button id="b2">给id=pink的div切换边框</button>
+        <button id="b3">给有id!=pink属性的div切换边框</button>
+        <button id="b4">给有id以p开头的div切换边框</button>
+        <button id="b5">给有id以k结尾的div切换边框</button>
+        <button id="b6">给有id包含ee的div切换边框</button>
+      
+      <br>
+      <br>
+        <div id="pink">
+            id=pink的div
+        </div>
+             
+        <div id="green">
+          id=green的div
+        </div>
+             
+        <div >
+           没有id的div
+        </div>
+</body>
+</html>

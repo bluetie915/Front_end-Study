@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery过滤器filter和not</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="box">div1 <span></span> </div>
+    <div>div2</div>
+    <script>
+        $('div').css('background','red');
+        $('div').filter('.box').css('background','blue');//过滤(针对当前元素)
+        $('div').not('.box').css('background','green');//排除
+        $('div').has('span').css('background','black');//包含 (针对里面元素)
+        $('div').has('.box').css('background','red');//这个只能选中包含里面的并且类名是box的
+    </script>
+</body>
+</html>

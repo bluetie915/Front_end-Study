@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3的一些特性</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation:myfirst 5s;
+            -moz-animation:myfirst 5s; /* Firefox */
+        }
+        @keyframes myfirst
+        {
+            0%   {background:red;}
+            25%  {background:yellow;}
+            50%  {background:blue;}
+            100% {background:green;}
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            0%   {background:red;}
+            25%  {background:yellow;}
+            50%  {background:blue;}
+            100% {background:green;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

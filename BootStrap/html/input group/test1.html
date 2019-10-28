@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框组合</title>
+    <script src="../../js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="../../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <style>
+        div{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--基本组合-->
+    <div class="input-group">
+        <span class="input-group-addon" id="addon1">@</span>
+        <input type="text" class="form-control" placeholder="用户名" aria-describedby="addon1">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="邮箱" aria-describedby="addon2">
+        <span class="input-group-addon" id="addon2">@qq.com</span>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" placeholder="金额" aria-describedby="amount">
+        <span class="input-group-addon">.00</span>
+    </div>
+
+    <br>
+
+    <!--尺寸-->
+    <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group input-group">
+        <span class="input-group-addon" id="basic-addon2">@</span>
+        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon2">
+    </div>
+    <div class="input-group input-group-sm">
+        <span class="input-group-addon" id="basic-addon3">@</span>
+        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon3">
+    </div>
+
+    <br>
+
+    <!--复选框和单选框-->
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input type="checkbox">
+        </span>
+        <input type="text" class="form-control">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input type="radio">
+        </span>
+        <input type="text" class="form-control">
+    </div>
+
+    <br>
+
+    <!--整合按钮-->
+    <div class="input-group">
+         <span class="input-group-btn">
+            <button class="btn btn-default" type="button">搜索</button>
+         </span>
+        <input type="text" class="form-control" placeholder="Search for...">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">搜索</button>
+        </span>
+    </div>
+
+    <br>
+
+    <!--整合下拉菜单-->
+    <div class="input-group">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">搜索<span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Google</a></li>
+                <li><a href="#">百度</a></li>
+                <li><a href="#">搜狗</a></li>
+                <li class="divider"></li>
+                <li><a href="#">人民搜索</a></li>
+            </ul>
+        </div>
+        <input type="text" class="form-control" aria-label="...">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" aria-label="...">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">搜索<span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#">Google</a></li>
+                <li><a href="#">百度</a></li>
+                <li><a href="#">搜狗</a></li>
+                <li class="divider"></li>
+                <li><a href="#">人民搜索</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <!--整合分裂式下拉菜单-->
+    <div class="input-group">
+        <input type="text" class="form-control" aria-label="...">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default">提交</button>
+            <button type="button" class="btn btn-default dropdown-toggle"data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="#">HTML</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">CSS</a>
+                </li>
+
+                <li role="presentation">
+                    <a href="#">Javascript</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">AJAX</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

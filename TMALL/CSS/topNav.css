@@ -1,0 +1,30 @@
+/* 设置body属性 */
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+/* 超链接设置灰色 */
+a{
+    color: #999;
+}
+/* 天猫红 */
+.redColor{
+    color: #C40000 !important;
+}
+/* 设置导航栏布局 */
+nav.top{
+    background-color: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #7e7e7e;
+}
+/* 设置导航栏里的超链接间距 */
+nav.top span,nav.top a{
+    color: #999;
+    margin: 0px 10px 0px 10px;
+}
+/* 超链接悬停 */
+nav.top a:hover{
+    color: #C40000;
+    text-decoration: none;
+}

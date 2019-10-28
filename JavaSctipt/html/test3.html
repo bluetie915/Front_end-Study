@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试局部变量和全局变量</title>
+    <script>
+        var i = 10;
+        j = 10;   //这是全局变量
+        function method(){
+            var m = 10;//这是局部变量
+            n = 20;//这是全局变量
+        }
+        // alert("i="+i);
+        // alert("j="+j);
+        method();
+        alert("m="+m);
+        alert("n="+n);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

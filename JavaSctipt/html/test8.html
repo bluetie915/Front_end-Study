@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>throw异常处理</title>
+</head>
+<body>
+    <form>
+        <input id="tw" type="text">
+        <input type="button" onclick="demo()" value="go">
+    </form>
+    <script>
+        var t = document.getElementById("tw").value;
+        function demo(){
+            try {
+                alert(t);
+                if(t == ""){
+                    throw "请输入";    
+                }
+            } catch (error) {
+                alert(error);
+            }
+        }
+    </script>
+</body>
+</html>

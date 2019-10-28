@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM操作html</title>
+    <script>
+        function change(){
+            document.getElementById("aid").href = "http://www.taobao.com";
+        }
+    </script>
+</head>
+<body>
+    <a id="aid" href="http://www.baidu.com">百度一下</a>
+    <button onclick="change();">更改</button>
+    <!-- 也可以修改任何盒子里面的内容，用innerHTML即可 -->
+</body>
+</html>

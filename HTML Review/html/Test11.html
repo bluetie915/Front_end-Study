@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宽高</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 10px black solid;
+            background: red;
+        }
+    </style>
+    <script>
+            $(function (){
+                alert($('div').width());
+                // alert($('div').css("width"));//同上
+                alert($('div').innerWidth());//width + padding
+                alert($('div').outerWidth());//width + padding + border
+                alert($('div').outerWidth(true));//width +  padding + border + margin
+            });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

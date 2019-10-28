@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件操作on()和off()</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        //on可以添加多个事件
+        // $(function(){
+        //     $('div').on('click mouseover',function(){
+        //         alert("successfully");
+        //     });
+        // });
+
+        //每个事件可以干不同的事
+        // $(function(){
+        //     $('div').on({
+        //         'click':function(){
+        //             alert("123");
+        //         },
+        //         'mouseover':function(){
+        //             alert("456");
+        //         }
+        //     });
+        // });
+
+        //off()无参数取消所有事件，有参数取消参数事件
+        $(function(){
+            $('div').on('click mouseover',function(){
+                alert("successfully");
+                $('div').off();
+                // $('div').off('click');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>div</div>
+</body>
+</html>

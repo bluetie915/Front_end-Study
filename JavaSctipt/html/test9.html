@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js操作具体事件</title>
+</head>
+<body onload="mg()">
+    <div style="width: 100px; height:100px; background-color:red;" onmouseover="onOver(this)" onmouseout="onOut(this)"></div>
+    <script>
+        function onOver(e){
+            e.innerHTML = "Hello";
+        }
+        function onOut(e){
+            e.innerHTML = "world";
+        }
+    </script>
+    <form>
+        <input type="text" onchange="changeDemo(this)">
+        <input type="text" onselect="changeBg(this)">
+        <input type="text" onfocus="changeFocus(this)">
+    </form>
+    <script>
+        function changeDemo(bg){
+            alert("Hello,内容改变了");
+        }
+        function changeBg(bg){
+            bg.style.background = "red";
+        }
+        function changeFocus(bg){
+            bg.style.background = "blue";
+        }
+        function mg(){
+            alert("网页加载完毕");
+        }
+    </script>
+</body>
+</html>

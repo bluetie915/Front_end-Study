@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的其它静态方法</title>
+    <script src="jquery.js " ></script>
+    <script>
+        /*
+        $.trim();
+        作用：去除字符串两端的空格
+        参数：需要去除空格的字符串
+        返回值 ：去除空格之后的字符串
+         */
+        var str = "    Hello    ";
+        var res = $.trim(str);
+        console.log("---"+str+"---");
+        console.log("---"+res+"---");
+
+
+        /*
+        $.isWindow();
+        作用：判断传入的对象是否是window对象
+        返回值：true/false
+         */
+        var arr = [1,3,5,7,9];
+        var arrlike = {0:1,1:3,2:5,3:7,4:9,length:5};
+        var obj = {"name":"Hello",age:"33"};
+        var fn = function () {};
+        var w = window;
+        var res2 = $.isWindow(window);
+        console.log(res2);//只有window是真，别的都是假
+
+        /*
+         $.isArray();
+         作用：判断传入的对象是否是真数组
+         返回值：true/false
+         */
+        var res3 = $.isArray(arr);//只有arr是真，别的都是假
+        console.log(res3);
+
+        /*
+         $.isFunction();
+         作用：判断传入的对象是否是方法
+         返回值：true/false
+         jQuery是一个方法，以下是jQuery的整体结构
+         (function( window, undefined ) {
+
+         })( window );
+
+         */
+        var res4 = $.isFunction(fn);//传入jQuery发现也是true，得知jQuery是一个方法
+        console.log(res4);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

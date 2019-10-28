@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p name="pn">Hello</p>
+    <p name="pn">Hello</p>
+    <p name="pn">Hello</p>
+    <p name="pn">Hello</p>
+    <a href="#" id="aid" title="得到了a标签的属性">test</a>
+    <a href="#" id="aid2">标签二</a>
+
+    <ul><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+
+    <div id="box">
+        <p id="pid">div的p元素</p>
+    </div>
+    <script>
+        function getName(){//getElementsByTagName和这个类似
+            var count = document.getElementsByName("pn");
+            var p = count[0];
+            p.innerHTML = "world";
+        }
+        //getName();
+        function getAttr(){
+            var anode = document.getElementById("aid");
+            var attr = anode.getAttribute("title");
+            alert(attr);
+        }
+        //getAttr();
+        function setAttr(){
+            var anode = document.getElementById("aid2");
+            anode.setAttribute("title","动态设置a的属性");
+            var attr = anode.getAttribute("title");
+            alert(attr);
+        }
+        //setAttr();
+        function getChildNode(){
+            var childnode = document.getElementsByTagName("ul")[0].childNodes;
+            alert(childnode.length);
+            alert(childnode[0].nodeType);
+        }
+        //getChildNode();
+        function getParentNode(){
+            var div = document.getElementById("pid");
+            alert(div.parentNode.nodeName);
+        }
+        //getParentNode();
+        function createNode(){
+            var body = document.body;
+            var input = document.createElement("input");
+            input.type = "button";
+            input.value = "按钮";
+            body.appendChild(input);
+        }
+        //createNode();   //createTextNode和这个类似
+        function addNode(){
+            var div = document.getElementById("box");
+            var node = document.getElementById("pid");
+            var newnode = document.createElement("p");
+            newnode.innerHTML = "动态添加p元素";
+            div.insertBefore(newnode,node);
+        }
+        //addNode();
+        function removeNode(){
+            var div = document.getElementById("box");
+            var p = div.removeChild(div.childNodes[1]);
+        }
+        //removeNode();
+        function getSize(){//不包含滚动条
+            var width = document.documentElement.offsetWidth;//可以将documentElement换成 body解决不兼容问题
+            var height = document.documentElement.offsetHeight;
+            alert(width+":"+height);
+        }
+        //getSize();
+        //scrollHeight包括滚动条
+    </script>
+</body>
+</html>

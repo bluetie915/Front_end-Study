@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浏览器对象</title>
+</head>
+<body>
+<div id="divtime"></div>
+<script>
+    var mytime = setInterval(function(){getTime()},1000);
+    function getTime(){
+        var d = new Date();
+        console.log(d);
+        var t = d.toLocaleTimeString();
+        document.getElementById("divtime").innerHTML = t;
+    }
+</script>
+</body>
+</html>

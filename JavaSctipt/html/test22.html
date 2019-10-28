@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试Location</title>
+</head>
+<body>
+    <button onclick="getLoc()">go</button>
+    <button onclick="getScreen()">go</button>
+    <p id="ppp"></p>
+    <script>
+        function getLoc(){
+            document.getElementById("ppp").innerHTML = window.location.href;
+            //还可以有hostname-web主机的域名,
+            // pathname-当前网页的路径和文件名,
+            // prot-web主机的端口,
+            // protocol-web协议,
+            // sssign-加载新的文档
+        }
+        function getScreen(){
+            document.write("可用宽度："+screen.availWidth+"可用高度："+screen.availHeight);
+            document.write("屏幕宽度："+screen.width+"屏幕高度："+screen.height);
+        }
+    </script>
+</body>
+</html>

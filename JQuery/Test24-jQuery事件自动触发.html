@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery事件自动触发</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <script src="jquery.js" ></script>
+    <script>
+        $(function(){
+            //1.什么是事件冒泡?
+            //2.如何阻止事件冒泡？
+            //儿子里面写return false 或者传参event 下面加上event.stopPropagation()
+            //3.什么是默认行为？
+            //4.如何阻止默认行为？
+            //在事件中写return false 或者传参event 下面加上event.preventDefault()
+
+             $(".son").click(function(event){
+             alert("son");
+             //return false;
+//             event.stopPropagation();
+             });
+
+             $(".father").click(function(){
+             alert("father");
+             });
+
+//            $(".father").trigger("click");
+//            $(".father").triggerHandler("click");
+
+            /*
+            trigger:如果用trigger自动触发事件，会触发事件冒泡
+            triggerHandler:如果利用triggerHandler自动触发事件，不会触发事件冒泡
+             */
+//            $(".son").trigger("click");
+//            $(".son").triggerHandler("click");
+
+
+
+            $("input[type='submit']").click(function(){
+                alert("submit");
+            });
+
+            /*
+            trigger:如果利用trigger自动触发事件，会触发默认行为
+            triggerHandler:如果利用triggerHandler自动触发事件，不会触发默认行为
+             */
+//            $("input[type='submit']").trigger("click");
+            $("input[type='submit']").triggerHandler("click");
+        });
+    </script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+
+<a href="http://www.baidu.com">注册</a>
+<form action="http://www.taobao.com">
+    <input type="text">
+    <input type="submit">
+</form>
+</body>
+</html>

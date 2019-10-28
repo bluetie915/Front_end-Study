@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a:link{/*连接之前*/
+            color: purple;
+        }
+        a:visited{/*连接之后*/
+            color: blue;
+        }
+        a:hover{/*鼠标放上面*/
+            padding: 5px;
+            margin:0px;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        a:active{/*点击*/
+            background-color: aqua;
+        }
+
+
+
+        li:first-child{/*对第一个子元素指定样式*/
+            text-decoration: underline;
+        }
+        li:last-child{/*对最后一个元素指定样式*/
+            text-decoration: line-through;
+        }
+        li:nth-child(2n){/*选中第几个，n表示选中偶数个，2n+1表示选中奇数个*/
+            background-color: #f00;
+        }
+        li:nth-last-child(2n){/*倒数选中第几个，n表示选中偶数个，2n+1表示选中奇数个*/
+            background-color: #FF0;
+        }
+        li:only-child{/*唯一子元素*/
+            background-color: #ccc;
+        }
+        /*li:nth-child(even){选中整数偶数个  等同于li:nth-child(2n)}*/
+        /*li:nth-child(odd){选中整数奇数个   li:nth-last-child(2n)}*/
+        /*li:nth-last-child(even){选中整数偶数个  等同于li:nth-last-child(2n)}*/
+        /*li:nth-last-child(odd){选中整数奇数个   li:nth-last-last-child(2n)}*/
+        h2:nth-of-type(1){/*选中类型的第一个*/
+            color: red;
+        }
+        h2:nth-of-type(2){/*选中类型的第二个*/
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.baidu.com" title="百度">百度一下</a>
+
+
+    <h2>贺岁喜剧电影</h2>
+    <ul>
+        <li>大闹天竺</li>
+        <li>老师也疯狂</li>
+        <li>摆渡人</li>
+        <li>决战食神</li>
+        <li>我说的都是真的</li>
+        <li>欢乐喜剧人</li>
+    </ul>
+    <h2>贺岁儿童动画片</h2>
+    <ul>
+        <li>熊出没之奇幻空间</li><!--单个li  li:first-child和li:last-child都可以选中-->
+    </ul>
+    <h2>贺岁动作电影</h2>
+</body>
+</html>

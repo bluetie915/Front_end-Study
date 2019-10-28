@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>寻找find()和下标eq()</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>2</h2>
+        <h4>4</h4>
+        <h2>2</h2>
+        <h2>2</h2>
+        <h4>4</h4>
+        <h2>2</h2>
+    </div>
+    <script>
+        //find()只能找到包含其中的
+        $('div').find('h4').css('background','red');
+        //eq()类似于数组下标
+        $('div').find('h4').eq(1).css('background','blue');
+    </script>
+</body>
+</html>

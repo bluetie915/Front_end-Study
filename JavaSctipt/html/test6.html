@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js操作事件</title>
+</head>
+<body>
+    <p id="pid">Hello</p>
+    <button id="btn">go</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            alert("Hello");
+        });
+    </script>
+    <button id="btn2">go</button>
+    <script>
+        var x = document.getElementById("btn2");
+        x.addEventListener("click",hello);//事件句柄
+        x.addEventListener("click",world);
+        x.removeEventListener("click",world);
+        function hello(){
+            alert("hello");
+        }
+        function world(){
+            alert("world");
+        }
+    </script>
+</body>
+</html>

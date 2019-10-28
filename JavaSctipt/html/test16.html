@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件处理</title>
+</head>
+<body>
+    <div id="box">
+            <button id="btn1" onclick="btn1click()">go</button>
+    </div>
+    
+    <!-- html事件处理 -->
+    <!-- <script>  //修改麻烦，要修改两个地方
+            function btn1click(){
+                alert("Hello html事件处理");
+            }
+    </script> -->
+    
+    <!-- DOM0级事件处理 -->
+    <!-- <script>//只需要改动一处，但是多个事件会被覆盖掉
+        var btn = document.getElementById("btn1");
+        btn.onclick = function(){alert("Hello DOM0级事件处理1")};//会被覆盖掉
+        btn.onclick = function(){alert("Hello DOM0级事件处理2")};
+        // btn.onclick = null;//清除事件
+    </script> -->
+
+    <!-- DOM2级事件处理 -->
+    <!-- <script>//不会发生覆盖情况
+        var btn = document.getElementById("btn1");
+        btn.addEventListener("click",demo1);
+        btn.addEventListener("click",demo2);
+        function demo1(){
+            alert("DOM2级事件处理程序1");
+        }
+        function demo2(){
+            alert("DOM2级事件处理程序2");
+        }
+        btn.removeEventListener("click",demo2);//将事件2移除
+    </script> -->
+
+     
+    <script>
+        var btn = document.getElementById("btn1");
+        if(btn.addEventListener){//大多数浏览器
+            btn.addEventListener("click",demo);
+        }if(btn.attachEvent){//ie8之前的版本
+            btn.attachEvent("onclick",demo);
+        }else{//不支持DOM2级事件处理只能用DOM0级事件处理
+            btn.onclick = dem0();
+        }
+        function demo(){
+            alert("Hello");
+        }
+    </script>
+</body>
+</html>

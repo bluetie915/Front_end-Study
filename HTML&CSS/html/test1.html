@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML第一课</title>
+    <style>
+        body{/*将全文字体定义为微软雅黑*/
+            font-family: 微软雅黑;
+        }
+        #ta1{/*定义table1的字体颜色和字体*/
+            color: blue;
+            font-family: Consolas;
+        }
+        #ta2 tr td,th{/*定义table2的单元格边框*/
+            color: red;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <table id="ta1" border="1px" cellspacing="2px" cellpadding="4px" frame="hsides">
+        <tr>
+            <th>name</th>
+            <th>sex</th>
+            <th>hobby</th>
+        </tr>
+        <tr>
+            <td>zhangsan</td>
+            <td>nan</td>
+            <td>basketball</td>
+        </tr>
+        <tr>
+            <th>lihua</th>
+            <th>nv</th>
+            <th>paint</th>
+        </tr>
+    </table>
+
+    我们都是<strong>好孩子</strong>    <br><!--标注，加粗-->
+    我们都是<em>好孩子</em>         <br><!--标注，斜体-->
+    我们都是<q>好孩子</q>          <br><!--加引号-->
+    我们都是<blockquote>好孩子</blockquote><!--引用块-->
+    <hr width="80%" align="center" size="3" color="red" noshade=""><!--分割线-->
+    <address>天津市西青区天津城建大学</address><!--斜体-->
+    <code><!--语句代码块-->
+        public static void main(String args[]){
+            int b = 0;
+        }
+    </code>
+    <pre><!--保留空格和换行-->
+        public static void main(String args[]){
+            int b = 0;
+        }
+    </pre>
+    <ul><!--无序列表-->
+        <li>第一点</li>
+        <li>第二点</li>
+        <li>第三点</li>
+    </ul>
+    <ol type="A">
+        <li>第一点</li>
+        <li>第二点</li>
+        <li>第三点</li>
+    </ol>
+    <table id="ta2" summary="这是一个表格介绍">
+        <caption>Information</caption>
+        <tr>
+            <th>name</th>
+            <th>sex</th>
+            <th>hobby</th>
+        </tr>
+        <tr>
+            <td>zhangsan</td>
+            <td>nan</td>
+            <td>basketball</td>
+        </tr>
+        <tr>
+            <th>lihua</th>
+            <th>nv</th>
+            <th>paint</th>
+        </tr>
+    </table>
+    <a href="http://www.baidu.com" title="百度" target="_blank">百度一下</a> <br><br>
+    <img src="../img/dog.jpg" alt="下载失败" title = "小狗狗" width="200"><br><br>
+    <form action="">
+        <lable>表单学习</lable>
+        <textarea rows="3" cols="5">文本域</textarea>
+        <input type="radio" name="sex" value="男" checked>男
+        <input type="radio" name="sex" value="女">女 <br><br>
+        <input type="checkbox" name="check1" value="吃" checked>吃
+        <input type="checkbox" name="check2" value="喝">喝
+        <input type="checkbox" name="check3" value="玩" checked>玩
+        <input type="checkbox" name="check4" value="乐">乐 <br><br>
+        <select><!--在<select>标签中设置multiple="multiple"属性，就可以实现多选功能-->
+            <option value="读书">读书</option>
+            <option value="运动" selected>运动</option>
+            <option value="音乐">音乐</option>
+            <option value="购物">购物</option>
+        </select>
+    </form>
+    <br><br><br>
+    <form>
+        <label for="male">男</label>
+        <input type="radio" name="gender" id="male" />
+        <br />
+        <label for="female">女</label>
+        <input type="radio" name="gender" id="female" />
+        <br />
+        <label for="email">输入你的邮箱地址</label>
+        <input type="email" id="email" placeholder="Enter email">
+    </form>
+</body>
+</html>

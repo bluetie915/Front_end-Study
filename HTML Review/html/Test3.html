@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery的链式操作</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        //jQuery支持链式操作
+        var div1 = $("#box");
+        div1.html("I am box!").css('background','blue').click(function (){
+            alert($(this).html());
+        })
+        //原生js取值document.getElementById("box").innerHTML
+        //原生js赋值document.getElementById("box").innerHTML = "new"
+        //jQuery取值$("#box").html()
+        //jQuery赋值$("#box").html("new")
+        //css()两个参数是设置，一个参数css('width')是获取
+    </script>
+</body>
+</html>

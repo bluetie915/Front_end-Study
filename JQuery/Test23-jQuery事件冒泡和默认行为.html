@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery事件冒泡和默认行为</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <script src="jquery.js" ></script>
+        <script>
+            $(function(){
+                //1.什么是事件冒泡?
+                //2.如何阻止事件冒泡？
+                //儿子里面写return false 或者传参event 下面加上event.stopPropagation()
+                //3.什么是默认行为？
+                //4.如何阻止默认行为？
+                //在事件中写return false 或者传参event 下面加上event.preventDefault()
+                /*
+                $(".son").click(function(event){
+                    alert("son");
+//                    return false;
+                    event.stopPropagation();
+                });
+                $(".father").click(function(){
+                    alert("father");
+                });
+                */
+                $("a").click(function(event){
+                    alert("弹出注册框");
+//                    return false;
+                    event.preventDefault();
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <a href="http://www.baidu.com">注册</a>
+    <form action="http://www.taobao.com">
+        <input type="text">
+        <input type="submit">
+    </form>
+</body>
+</html>

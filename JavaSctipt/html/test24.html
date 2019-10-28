@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试面向对象</title>
+    <script>
+//        var people = {
+//            name: "zhangsan",
+//            age: 30,
+//            eat:function(){
+//                alert ("吃东西");
+//            }
+//        }
+//        alert(people.name);
+//        alert(people.eat());
+        function person(){
+
+        }
+        person.prototype = {
+            name : "zhangsan",
+            age : 30,
+            eat : function(){
+                alert("吃东西");
+            }
+        }
+        var p = new person();
+        alert(p.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
